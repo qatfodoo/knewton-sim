@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "knewton_sim.py", line 7, in <module>
+    top_users_perf = pickle.load( open( "top_users_perf.pkl", "rb" ) )
+  File "/n/sw/centos6/hpc-002/python-2.7.1/lib/python2.7/pickle.py", line 1378, in load
+    return Unpickler(file).load()
+  File "/n/sw/centos6/hpc-002/python-2.7.1/lib/python2.7/pickle.py", line 858, in load
+    dispatch[key](self)
+  File "/n/sw/centos6/hpc-002/python-2.7.1/lib/python2.7/pickle.py", line 1090, in load_global
+    klass = self.find_class(module, name)
+  File "/n/sw/centos6/hpc-002/python-2.7.1/lib/python2.7/pickle.py", line 1124, in find_class
+    __import__(module)
+ImportError: No module named pandas.core.series
