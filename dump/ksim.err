@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "knewton_sim.py", line 10, in <module>
+Traceback (most recent call last):
+      File "knewton_sim.py", line 10, in <module>
+start_time = time.time()
+    NameErrorstart_time = time.time()
+: NameErrorname 'time' is not defined: 
+name 'time' is not defined
+Traceback (most recent call last):
+  File "knewton_sim.py", line 10, in <module>
+Traceback (most recent call last):
+      File "knewton_sim.py", line 10, in <module>
+start_time = time.time()
+    NameErrorstart_time = time.time()
+: NameErrorname 'time' is not defined: 
+name 'time' is not defined
+Traceback (most recent call last):
+  File "knewton_sim.py", line 10, in <module>
+    start_time = time.time()
+NameError: name 'time' is not defined
+Traceback (most recent call last):
+  File "knewton_sim.py", line 10, in <module>
+    start_time = time.time()
+NameError: name 'time' is not defined
+Traceback (most recent call last):
+  File "knewton_sim.py", line 10, in <module>
+    start_time = time.time()
+NameError: name 'time' is not defined
+Traceback (most recent call last):
+  File "knewton_sim.py", line 10, in <module>
+    start_time = time.time()
+NameError: name 'time' is not defined
