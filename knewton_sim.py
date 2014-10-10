@@ -18,7 +18,7 @@ avg_err = defaultdict(int) # Avg error of combinations involving question
 n_comb = defaultdict(int) # Number of comb having each quest (avoid computing combinatorics (needs unavailable packages))
 
 i = 0
-for u in top_users[0:5]:
+for u in top_users[0:1]:
     i += 1
     print i # Count of users in the loop
 
@@ -26,9 +26,10 @@ for u in top_users[0:5]:
     top_users_questcomb = list(itertools.combinations(quest, 5))
     user_perf = top_users_perf[u]
 
-   	
+    print user_perf
+    
     for c in top_users_questcomb:
-    	err = (user_perf - 1 / len(c) * sum(c))^2 #quadratic error
+    	err = (user_perf - 1 / len(c) * float(sum(c))) ** 2 # quadratic error
     	for q in c:	
 	    avg_err[q] += err
 	    n_comb[q] += 1
