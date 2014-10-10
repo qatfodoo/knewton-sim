@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "knewton_sim.py", line 31, in <module>
+    err = (user_perf - 1 / len(c) * sum(c))^2 #quadratic error
+TypeError: ufunc 'bitwise_xor' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''

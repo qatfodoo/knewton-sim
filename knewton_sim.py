@@ -19,7 +19,7 @@ n_comb = defaultdict(int) # Number of comb having each quest (avoid computing co
 
 i = 0
 for u in top_users[0:5]:
-	i += 1
+    i += 1
     print i # Count of users in the loop
 
     quest = top_users_quest[u].keys()
@@ -30,11 +30,11 @@ for u in top_users[0:5]:
     for c in top_users_questcomb:
     	err = (user_perf - 1 / len(c) * sum(c))^2 #quadratic error
     	for q in c:	
-	    	avg_err[q] += err
-	    	n_comb[q] += 1
+	    avg_err[q] += err
+	    n_comb[q] += 1
 
 	for q in avg_err.keys():
-		avg_err[q] /= n_comb[q]
+	    avg_err[q] /= n_comb[q]
 
 print avg_err
     
