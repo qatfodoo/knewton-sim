@@ -5,7 +5,7 @@ from collections import defaultdict
 import os
 
 if os.getenv('SLURM_JOB_ID') != "":
-    task_id = os.getenv('SLURM_ARRAY_TASK_ID') # Task id, to parallelize computation
+    task_id = int(os.getenv('SLURM_ARRAY_TASK_ID')) # Task id, to parallelize computation
     # Load top users data
     top_users = list(pickle.load( open( "top_users.pkl", "rb" ) ))
     top_users_quest = pickle.load( open( "top_users_quest.pkl", "rb" ) )
