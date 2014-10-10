@@ -5,7 +5,10 @@ from collections import defaultdict
 import os
 
 if os.getenv('SLURM_JOB_ID') != "":
-    task_id = os.getenv('SLURM_ARRAY_TASK_ID') # Task id, to parallelize computation
+    task_id = int(os.getenv('SLURM_ARRAY_TASK_ID')) # Task id, to parallelize computation
+    print task_id
+    start_time = time.time()
+
     # Load top users data
     top_users = list(pickle.load( open( "top_users.pkl", "rb" ) ))
     top_users_quest = pickle.load( open( "top_users_quest.pkl", "rb" ) )
@@ -46,3 +49,5 @@ if os.getenv('SLURM_JOB_ID') != "":
 
     with open('./out/ov_err_task_' + str(task_id) + '.pkl', 'wb') as f:
         pickle.dump((ov_err, ov_it), f, pickle.HIGHEST_PROTOCOL)
+
+    print("--- %s seconds ---" % time.time() - start_time) # Program time

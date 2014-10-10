@@ -8,17 +8,14 @@ top_users_quest = pickle.load( open( "top_users_quest.pkl", "rb" ) )
 
 top_users_perf = pickle.load( open( "top_users_perf.pkl", "rb" ) )
 
-print type(top_users)
-print type(top_users_quest)
-print type(top_users_perf)
-
-print top_users_quest[350]
+## Tentative to generate all 5 questions combination.
+# Aborted because too intense computationally (memory limits).
 
 avg_err = defaultdict(int) # Avg error of combinations involving question
 n_comb = defaultdict(int) # Number of comb having each quest (avoid computing combinatorics (needs unavailable packages))
 
 i = 0
-for u in top_users[0:1]:
+for u in top_users:
     i += 1
     print i # Count of users in the loop
 
