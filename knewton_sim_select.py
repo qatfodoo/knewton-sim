@@ -20,8 +20,7 @@ if os.getenv('SLURM_JOB_ID') != "":
 
     # Load questions ordered by scoring error in previous simulation
     sorted_quest = pickle.load(open("./out/sorted_quest.pkl", "rb")) # tuple
-    max_ind = str(math.floor(len(sorted_quest) * (0.5 + float(task_id) / 2 * N_tasks))) # From 50% to all questions.
-    print max_ind
+    max_ind = int(math.floor(len(sorted_quest) * (0.5 + float(task_id) / 2 / N_tasks))) # From 50% to all questions.
     final_bank = [t[0] for t in sorted_quest][0:max_ind]
 
     sum_err = defaultdict(int) # Avg error of combinations involving question
