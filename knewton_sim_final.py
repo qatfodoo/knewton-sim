@@ -14,6 +14,9 @@ if os.getenv('SLURM_JOB_ID') != "":
     top_users_quest = pickle.load(open("top_users_quest.pkl", "rb"))
     top_users_perf = pickle.load(open("top_users_perf.pkl", "rb"))
 
+    # Load final bank of questions
+    final_bank = pickle.load(open("./out/final_bank.pkl", "rb"))
+
     N_tasks = 10 # Number of parallel tasks
     M = 100000 # Number of simulations per top users
 
@@ -27,7 +30,7 @@ if os.getenv('SLURM_JOB_ID') != "":
         if i % N_tasks != (task_id - 1): continue # Only consider 1/10 of users per task
 
         u = top_users[i]
-        quest = top_users_quest[u].keys()
+        quest = list(set(top_users_quest[u].keys()) & set(final_bank)) # Intersection of user's questions and final bank
         user_perf = top_users_perf[u][0]
 
         for b in range(M):
@@ -36,18 +39,18 @@ if os.getenv('SLURM_JOB_ID') != "":
             ov_err += err
             ov_it += 1
 
-            for q in c:	
+            for q in c: 
                 sum_err[q] += err
                 n_comb[q] += 1
 
 
-    with open('./out/sim1/sum_err_task_' + str(task_id) + '.pkl', 'wb') as f:
+    with open('./out/sim2/sum_err_final_task_' + str(task_id) + '.pkl', 'wb') as f:
         pickle.dump(sum_err, f, pickle.HIGHEST_PROTOCOL)
 
-    with open('./out/sim1/n_comb_task_' + str(task_id) + '.pkl', 'wb') as f:
+    with open('./out/sim2/n_comb_final_task_' + str(task_id) + '.pkl', 'wb') as f:
         pickle.dump(n_comb, f, pickle.HIGHEST_PROTOCOL)
 
-    with open('./out/sim1/ov_err_task_' + str(task_id) + '.pkl', 'wb') as f:
+    with open('./out/sim2/ov_err_final_task_' + str(task_id) + '.pkl', 'wb') as f:
         pickle.dump((ov_err, ov_it), f, pickle.HIGHEST_PROTOCOL)
 
     print("--- %s seconds ---" % str(time.time() - start_time)) # Program time
