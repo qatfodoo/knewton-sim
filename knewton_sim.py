@@ -51,4 +51,4 @@ if os.getenv('SLURM_JOB_ID') != "":
     with open('./out/ov_err_task_' + str(task_id) + '.pkl', 'wb') as f:
         pickle.dump((ov_err, ov_it), f, pickle.HIGHEST_PROTOCOL)
 
-    print("--- %s seconds ---" % time.time() - start_time) # Program time
+    print("--- %s seconds ---" % str(time.time() - start_time)) # Program time
