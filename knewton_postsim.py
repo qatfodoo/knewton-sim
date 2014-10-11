@@ -1,5 +1,6 @@
 import pickle
 from collections import defaultdict
+import operator
 
 sum_err = defaultdict(int)
 n_comb = defaultdict(int)
@@ -30,15 +31,10 @@ ov_avg_err = ov_err / ov_it
 print "Overall error"
 print ov_avg_err
 
-# Restrict to questions with error less than average
-final_bank = []
-for q in avg_err.keys():
-    if avg_err[q] < ov_avg_err:
-        final_bank.append(q)
+# Get list of questions, sorted by avg error
+sorted_quest = sorted(avg_err.items(), key=operator.itemgetter(1))
 
-with open('./out/final_bank.pkl', 'wb') as f:
-        pickle.dump(final_bank, f, pickle.HIGHEST_PROTOCOL)
-
-print "Number of questions in final bank"
-print len(final_bank)
+print sorted_quest
+with open('./out/sorted_quest.pkl', 'wb') as f:
+        pickle.dump(sorted_quest, f, pickle.HIGHEST_PROTOCOL)
 

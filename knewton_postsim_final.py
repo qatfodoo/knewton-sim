@@ -11,9 +11,9 @@ ov_it = 0
 N_tasks = 10
 
 for t in range(N_tasks):
-    sum_err_t = pickle.load(open("./out/sim2/sum_err_task_" + str(t + 1) + ".pkl", "rb"))
-    n_comb_t = pickle.load(open("./out/sim2/n_comb_task_" + str(t + 1) + ".pkl", "rb"))
-    ov_err_t = pickle.load(open("./out/sim2/ov_err_task_" + str(t + 1) + ".pkl", "rb"))
+    sum_err_t = pickle.load(open("./out/sim2/sum_err_final_task_" + str(t + 1) + ".pkl", "rb"))
+    n_comb_t = pickle.load(open("./out/sim2/n_comb_final_task_" + str(t + 1) + ".pkl", "rb"))
+    ov_err_t = pickle.load(open("./out/sim2/ov_err_final_task_" + str(t + 1) + ".pkl", "rb"))
 
     for q in sum_err_t:
         sum_err[q] += sum_err_t[q]
