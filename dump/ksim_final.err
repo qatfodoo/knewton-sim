@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 22, in <module>
+    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+NameError: name 'floor' is not defined

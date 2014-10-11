@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 25, in <module>
+    final_bank = [t[0] for t in sorted_quest][0:max_ind]
+TypeError: slice indices must be integers or None or have an __index__ method
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 25, in <module>
+    final_bank = [t[0] for t in sorted_quest][0:max_ind]
+TypeError: slice indices must be integers or None or have an __index__ method
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 25, in <module>
+    final_bank = [t[0] for t in sorted_quest][0:max_ind]
+TypeError: slice indices must be integers or None or have an __index__ method
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 25, in <module>
+    final_bank = [t[0] for t in sorted_quest][0:max_ind]
+TypeError: slice indices must be integers or None or have an __index__ method
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 25, in <module>
+    final_bank = [t[0] for t in sorted_quest][0:max_ind]
+TypeError: slice indices must be integers or None or have an __index__ method
+Traceback (most recent call last):
+  File "knewton_sim_select.py", line 25, in <module>
+    final_bank = [t[0] for t in sorted_quest][0:max_ind]
+TypeError: slice indices must be integers or None or have an __index__ method

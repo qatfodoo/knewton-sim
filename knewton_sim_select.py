@@ -3,6 +3,7 @@ import random
 from collections import defaultdict
 import os
 import time
+import math
 
 if os.getenv('SLURM_JOB_ID') != "":
     task_id = int(os.getenv('SLURM_ARRAY_TASK_ID')) # Task id, to parallelize computation
@@ -19,7 +20,8 @@ if os.getenv('SLURM_JOB_ID') != "":
 
     # Load questions ordered by scoring error in previous simulation
     sorted_quest = pickle.load(open("./out/sorted_quest.pkl", "rb")) # tuple
-    max_ind = floor(len(sorted_quest) * (0.5 + float(task.id) / 2 * N_tasks)) # From 50% to all questions.
+    max_ind = str(math.floor(len(sorted_quest) * (0.5 + float(task_id) / 2 * N_tasks))) # From 50% to all questions.
+    print max_ind
     final_bank = [t[0] for t in sorted_quest][0:max_ind]
 
     sum_err = defaultdict(int) # Avg error of combinations involving question
